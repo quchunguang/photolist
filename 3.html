@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title>群芳妒</title>
+  <link rel="stylesheet" href="css/easyzoom.css" />
+
+</head>
+<body>
+
+
+<div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails is-ready">
+  <a href="large/image3.jpg">
+    <img src="small/image3.jpg" alt="">
+  </a>
+</div>
+<ul class="thumbnails">
+  <li>
+    <a href="large/image1.jpg" data-standard="small/image1.jpg">
+      <img src="thumb/image1.jpg" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="large/image2.jpg" data-standard="small/image2.jpg">
+      <img src="thumb/image2.jpg" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="large/image3.jpg" data-standard="small/image3.jpg">
+      <img src="thumb/image3.jpg" alt="">
+    </a>
+  </li>
+  <li>
+    <button onclick="window.location.href='index.html'">返回主页</button>
+  </li>
+</ul>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/easyzoom.js"></script>
+
+<script>
+
+// Instantiate EasyZoom instances
+var $easyzoom = $('.easyzoom').easyZoom();
+
+// Get an instance API
+var api = $easyzoom.data('easyZoom');
+
+$('.thumbnails').on('click', 'a', function(e) {
+  var $this = $(this);
+
+  e.preventDefault();
+
+  // Use EasyZoom's `swap` method
+  api.swap($this.data('standard'), $this.attr('href'));
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Kevin Qu 摄影展</title>
+  <link rel="stylesheet" href="css/list.css" />
+</head>
+<body>
+
+<h1>Kevin Qu 摄影展</h1>
+
+<div id="users">
+  <input class="search" placeholder="搜索题名或年份" />
+  <button class="sort" data-sort="name">
+    按名字排序
+  </button>
+
+  <p>说明：搜索可以输入题名或年份的任意部分内容，下面列表将即时返回过滤结果。如输入“芳”可得到两条结果。如输入“14”可获得一条结果。</p>
+
+  <ul class="list">
+    <li>
+      <img src="thumb/image1.jpg" class="thumb" height="41" width="60" alt=""/>
+      <h3 class="name"><a href="1.html">沁芳</a></h3>
+      <p class="born">2013</p>
+      <p>进入大观园的第一座桥，是沁芳亭桥，它在大观园中轴线上，白石为栏，环抱池沿，石桥三拱，兽面衔吐，四周均有美人靠，波光倩影，宛若琼阁。</p>
+    </li>
+    <li>
+      <img src="thumb/image2.jpg" class="thumb" height="41" width="60" alt=""/>
+      <h3 class="name"><a href="2.html">船</a></h3>
+      <p class="born">2013</p>
+      <p>月落乌啼霜满天，江枫渔火对愁眠。姑苏城外寒山寺，夜半钟声到客船。</p>
+    </li>
+    <li>
+      <img src="thumb/image3.jpg" class="thumb" height="41" width="60" alt=""/>
+      <h3 class="name"><a href="3.html">群芳妒</a></h3>
+      <p class="born">2014</p>
+      <p>驿外断桥边，寂寞开无主。已是黄昏独自愁，更著风和雨。无意苦争春，一任群芳妒。零落成泥碾作尘，只有香如故。</p>
+    </li>
+  </ul>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/list.js"></script>
+
+
+
+<script>
+
+var options = {
+  valueNames: [ 'name', 'born' ]
+};
+
+var userList = new List('users', options);
+
+</script>
+</body>
+</html>
